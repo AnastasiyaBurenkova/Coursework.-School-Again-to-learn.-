@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{92C588FB-347A-4D3F-948C-A08891347860}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AbstractShopView</RootNamespace>
+    <AssemblyName>AbstractShopView</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.4\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="APIClient.cs" />
+    <Compile Include="FormBonusFineBlocksLoad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBonusFineBlocksLoad.Designer.cs">
+      <DependentUpon>FormBonusFineBlocksLoad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMails.Designer.cs">
+      <DependentUpon>FormMails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormZakazchik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormZakazchik.Designer.cs">
+      <DependentUpon>FormZakazchik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormZakazchiks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormZakazchiks.Designer.cs">
+      <DependentUpon>FormZakazchiks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPayment.Designer.cs">
+      <DependentUpon>FormPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPayments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPayments.Designer.cs">
+      <DependentUpon>FormPayments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRabochi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRabochi.Designer.cs">
+      <DependentUpon>FormRabochi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRabochis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRabochis.Designer.cs">
+      <DependentUpon>FormRabochis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCreateZakaz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCreateZakaz.Designer.cs">
+      <DependentUpon>FormCreateZakaz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSection.Designer.cs">
+      <DependentUpon>FormSection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSectionPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSectionPayment.Designer.cs">
+      <DependentUpon>FormSectionPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSections.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSections.Designer.cs">
+      <DependentUpon>FormSections.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBonusFineBlock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBonusFineBlock.Designer.cs">
+      <DependentUpon>FormBonusFineBlock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBonusFineBlocks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBonusFineBlocks.Designer.cs">
+      <DependentUpon>FormBonusFineBlocks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTakeZakazInWork.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTakeZakazInWork.Designer.cs">
+      <DependentUpon>FormTakeZakazInWork.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormZakazchikZakazs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormZakazchikZakazs.Designer.cs">
+      <DependentUpon>FormZakazchikZakazs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HttpErrorMessage.cs" />
+    <Compile Include="MailZakazchik.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FormPutOnBonusFineBlock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPutOnBonusFineBlock.Designer.cs">
+      <DependentUpon>FormPutOnBonusFineBlock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="FormBonusFineBlocksLoad.resx">
+      <DependentUpon>FormBonusFineBlocksLoad.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormZakazchik.resx">
+      <DependentUpon>FormZakazchik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormZakazchiks.resx">
+      <DependentUpon>FormZakazchiks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPayment.resx">
+      <DependentUpon>FormPayment.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPayments.resx">
+      <DependentUpon>FormPayments.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRabochi.resx">
+      <DependentUpon>FormRabochi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRabochis.resx">
+      <DependentUpon>FormRabochis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateZakaz.resx">
+      <DependentUpon>FormCreateZakaz.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSection.resx">
+      <DependentUpon>FormSection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSectionPayment.resx">
+      <DependentUpon>FormSectionPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSections.resx">
+      <DependentUpon>FormSections.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBonusFineBlock.resx">
+      <DependentUpon>FormBonusFineBlock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBonusFineBlocks.resx">
+      <DependentUpon>FormBonusFineBlocks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTakeZakazInWork.resx">
+      <DependentUpon>FormTakeZakazInWork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormZakazchikZakazs.resx">
+      <DependentUpon>FormZakazchikZakazs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormPutOnBonusFineBlock.resx">
+      <DependentUpon>FormPutOnBonusFineBlock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportZakazchikZakazs.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AbstractShopModel\SchoolModel.csproj">
+      <Project>{5edcfafa-0f3a-4810-8489-4d221a86ad1e}</Project>
+      <Name>SchoolModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AbstractShopService\SchoolService.csproj">
+      <Project>{2bc53217-7680-45d4-970e-944996e6ab2e}</Project>
+      <Name>SchoolService</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
