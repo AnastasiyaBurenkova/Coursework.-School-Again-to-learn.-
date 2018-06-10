@@ -1,0 +1,17 @@
+﻿<Window x:Class="AgainSchoolViewClient.FormLetterPDF"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AgainSchoolViewClient"
+        mc:Ignorable="d"
+        Title="На почту" Height="189.972" Width="313.81" WindowStartupLocation="CenterScreen">
+    <Grid Margin="0,0,0,-21" Height="160" VerticalAlignment="Top">
+        <TextBox x:Name="textBoxMail" HorizontalAlignment="Left" Height="23" Margin="116,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134"/>
+        <Label Content="E-mail" HorizontalAlignment="Left" Margin="23,60,0,0" VerticalAlignment="Top" Width="52"/>
+        <Button Content="Получить" HorizontalAlignment="Left" Margin="185,111,0,0" VerticalAlignment="Top" Width="90" Height="23" Click="buttonSave_Click"/>
+        <Button Content="Отмена" HorizontalAlignment="Left" Margin="42,111,0,0" VerticalAlignment="Top" Width="83" Height="23" Click="buttonCancel_Click"/>
+
+
+    </Grid>
+</Window>

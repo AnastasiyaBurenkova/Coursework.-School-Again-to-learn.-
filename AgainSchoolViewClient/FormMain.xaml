@@ -1,0 +1,32 @@
+﻿<Window x:Class="AgainSchoolViewClient.FormMain"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AgainSchoolViewClient"
+        mc:Ignorable="d"
+        Title="Школа" Height="340" Width="1186.655" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="169*"/>
+            <ColumnDefinition Width="449*"/>
+            <ColumnDefinition Width="457*"/>
+        </Grid.ColumnDefinitions>
+        <Menu x:Name="menu" HorizontalAlignment="Left" Height="22" VerticalAlignment="Top" Width="870" Margin="10,0,0,0" Grid.ColumnSpan="3">
+            <MenuItem Header="Справочники" Height="22" Width="265">
+                <MenuItem Header="Записи на кружки" HorizontalAlignment="Right" Height="28" Width="255" Margin="0,0,0,0" Click="кружкиToolStripMenuItem_Click" RenderTransformOrigin="0.585,0.655"/>
+            </MenuItem>
+            <MenuItem Header="Отчеты" Height="22" Width="219">
+                <MenuItem Header="Список кружков" Height="32" Margin="0,0,0,0" HorizontalAlignment="Left" Width="341" Click="списокКружковToolStripMenuItem_Click"/>
+                <MenuItem Header="Отчеты по записям на кружки" Height="42" Margin="0,0,0,0" RenderTransformOrigin="1.215,0.743" HorizontalAlignment="Right" Width="335" Click="отчетToolStripMenuItem_Click"/>
+
+            </MenuItem>
+        </Menu>
+        <DataGrid x:Name="dataGridViewMain" HorizontalAlignment="Left" Height="272" Margin="0,27,0,0" VerticalAlignment="Top" Width="880" IsReadOnly="True" Grid.ColumnSpan="3"/>
+        <Button x:Name="buttonCreateOrder" Content="Создать запись" HorizontalAlignment="Left" Margin="292,48,0,0" VerticalAlignment="Top" Width="189" Height="28" Click="buttonCreateOrder_Click" Grid.Column="2"/>
+        <Button x:Name="buttonRef" Content="Обновить список" HorizontalAlignment="Left" Margin="292,254,0,0" VerticalAlignment="Top" Width="189" Height="28" Click="buttonRef_Click" Grid.Column="2"/>
+        <Button x:Name="buttonPayPolnost" Content="Оплатить" HorizontalAlignment="Left" VerticalAlignment="Top" Width="189" Margin="292,188,0,0" Height="28" Click="buttonPay_Click" Grid.Column="2"/>
+        <Button x:Name="button" Content="Применить бонус/штраф" Grid.Column="2" HorizontalAlignment="Left" Margin="292,116,0,0" VerticalAlignment="Top" Width="189" Height="30" Click="buttonBonusFine_Click" />
+
+    </Grid>
+</Window>
