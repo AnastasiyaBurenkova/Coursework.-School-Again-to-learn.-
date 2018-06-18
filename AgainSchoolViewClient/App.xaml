@@ -1,0 +1,9 @@
+﻿<Application x:Class="AgainSchoolViewClient.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:AgainSchoolViewClient"
+             StartupUri="FormLogin.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>
